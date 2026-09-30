@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>消防 SCBA · 气瓶充装与检测系统</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">SCBA</span>
+    <div class="brand-text">
+      <strong>空气呼吸器气瓶充装与检测系统</strong>
+      <small>气瓶归队 · 外观检查 · 组批充装 · 静置复测 · 配套核验</small>
+    </div>
+  </div>
+  <div class="top-actions">
+    <div id="notifyBell" class="bell" title="进程内提醒">
+      <span class="bell-ico">🔔</span><span id="notifyCount" class="bell-badge hidden">0</span>
+    </div>
+    <label class="actor-pick">
+      <span>当前操作人</span>
+      <select id="actorSelect"></select>
+    </label>
+  </div>
+</header>
+
+<section class="stat-strip" id="statStrip"></section>
+
+<nav class="tabs" id="tabs">
+  <button data-view="ledger" class="tab active">装备台账</button>
+  <button data-view="tasks" class="tab">任务领用</button>
+  <button data-view="returns" class="tab">归队检查</button>
+  <button data-view="batches" class="tab">充装组批</button>
+  <button data-view="retest" class="tab">压力复测</button>
+  <button data-view="pairing" class="tab">配套核验</button>
+  <button data-view="expiry" class="tab">检验到期</button>
+</nav>
+
+<main id="view" class="view"></main>
+
+<div id="toasts" class="toasts"></div>
+<div id="modal" class="modal hidden"><div class="modal-card" id="modalCard"></div></div>
+
+<script src="app.js"></script>
+</body>
+</html>
